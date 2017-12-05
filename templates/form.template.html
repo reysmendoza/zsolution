@@ -1,0 +1,80 @@
+
+{captcha_script}
+
+<div class="rFormControl"> 
+<form action="{plugin_location}/newContactAPI" {onSubmit} method="GET" >	
+<input name="redirectURL" type="hidden" id="redirectURL" value="{redirectURL}" />
+
+<input name="user_guid"  type="hidden" id="user_guid"  value="{user_guid}" />
+<input name="keyword"   type="hidden" id="keyword"   value="{keyword}" />
+<input name="shortcode" type="hidden" id="shortcode" value="{shortcode}" />
+<input name="email" 	type="hidden" id="email" value="{email}" />
+
+<div class="form-group"  >
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">First Name <span class="reqSpan">*</span></label>		 	
+		</div>
+		<div class="col-xs-12">
+			<input type="text" class="form-control" name="firstname" id="firstname" placeholder="" required />    	 
+		</div> 
+	</div>
+	
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">Last Name <span class="reqSpan">*</span></label>		 	
+		</div>
+		<div class="col-xs-12">
+			<input type="text" class="form-control" name="lastname" id="lastname" placeholder="" required />   
+		</div>
+	</div>
+	
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">Mobile Phone <span class="reqSpan">*</span></label>		 	
+		</div>
+		<div class="col-xs-12">
+			<input type="text" class="form-control" name="mobile" id="mobile"  value="" min-length="10" placeholder="" required /> 
+		</div>
+	</div>	
+
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">Email Address<span class="reqSpan">*</span> </label>		 	
+		</div>
+		<div class="col-xs-12">
+			<input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="" required />     
+		</div>
+	</div>
+
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">Message </label>		 	
+		</div>
+		<div class="col-xs-12">
+			<textarea class="form-control" name="request" id="request" rows="5" cols="25"></textarea>
+		</div>
+	</div>
+	{captcha_render_div}
+	<div class="row control-row"> 
+		<div class="col-xs-12">
+			<label class="control-label">  </label>		 	
+		</div>
+		<div class="col-xs-12">
+			<button type="submit" class="btn btn-primary">{SubmitButton}</button>
+		</div>
+	</div>	
+</div>
+</form>
+</div>
+{captcha_script_call}
+
+<style>
+	.control-label {  padding-top: 5px; margin-right: 10px; width: 120px;  border: 0px solid red; }
+	.control-row { margin-bottom: 8px; }	
+	.rFormControl { margin: 10px 20px 20px 20px; }
+	.disclaimer { font-size: 11px; }
+	.reqSpan { color: #aa0826; font-weight: bold; }
+	
+</style>
+ 
